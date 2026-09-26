@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Velora — independent tools by V Dev</title>
+  <meta name="description" content="Velora is a quiet studio page for V Dev: useful web tools, a scratch pad, and a focus timer. Static HTML hosted on GitHub Pages.">
+  <meta name="theme-color" content="#f2eee6">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1a1916"/>
+        <path d="M18 46V18h10.4c6.9 0 11.2 3.9 11.2 10 0 4.2-2.4 7.4-6.4 8.8L40.6 46h-8.2l-6.4-8.6H26V46H18zm8-15.4h2.2c2.8 0 4.5-1.5 4.5-3.8 0-2.3-1.7-3.7-4.5-3.7H26v7.5z" fill="#f2eee6"/>
+      </svg>
+      Velora
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#now">Now</a>
+      <a href="#bench">Bench</a>
+      <a href="#index">Index</a>
+      <a href="#colophon">Colophon</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <p class="kicker">Independent developer</p>
+      <h1>Quiet software for people who already know what they need.</h1>
+      <p class="lede">Velora is a studio page for V Dev. Playlists, remotes, carts, uploads — tools that stay out of the way. This page is static HTML, published on GitHub Pages as a live hosting test.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#bench">Open the bench</a>
+        <a class="btn btn-ghost" href="https://github.com/V-Dev-arch" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <section class="section" id="now">
+      <div class="section-title">
+        <h2>Now</h2>
+        <p class="meta">Local instruments</p>
+      </div>
+      <div class="grid-2">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>India Standard Time</h2>
+            <span class="meta">Live</span>
+          </div>
+          <div class="clock" id="clock" aria-live="polite">--:--:--</div>
+          <p class="clock-sub" id="clock-date">Loading date</p>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Shift</h2>
+            <span class="meta" id="timer-state">Ready</span>
+          </div>
+          <div class="timer-face" id="timer" aria-live="polite">25:00</div>
+          <div class="progress" aria-hidden="true"><span id="timer-bar"></span></div>
+          <div class="controls">
+            <button class="btn btn-primary" id="timer-toggle" type="button">Start</button>
+            <button class="btn btn-ghost" id="timer-reset" type="button">Reset</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="bench">
+      <div class="section-title">
+        <h2>Bench</h2>
+        <p class="meta">Stays in this browser</p>
+      </div>
+      <article class="panel">
+        <label for="note">Scratch pad</label>
+        <textarea id="note" placeholder="A line, a link, a next step."></textarea>
+        <div class="bench-foot">
+          <span id="note-count">0 characters</span>
+          <button class="btn btn-ghost" id="note-clear" type="button">Clear</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="index">
+      <div class="section-title">
+        <h2>Index</h2>
+        <p class="meta">Public work</p>
+      </div>
+      <div class="work-grid">
+        <a class="work-card span-2" href="https://github.com/V-Dev-arch/Vupload" target="_blank" rel="noreferrer">
+          <span class="meta">Sharing</span>
+          <h3>Vupload</h3>
+          <p>Fast, anonymous file sharing with drag-and-drop. Built to get a file from here to there without an account.</p>
+          <span class="arrow">Open repository</span>
+        </a>
+        <a class="work-card" href="https://github.com/V-Dev-arch/M3UZen-Pro-" target="_blank" rel="noreferrer">
+          <span class="meta">Playlists</span>
+          <h3>M3UZen Pro</h3>
+          <p>Edit M3U playlists in the browser. Keep the list, drop the desktop app.</p>
+          <span class="arrow">Open repository</span>
+        </a>
+        <a class="work-card" href="https://github.com/V-Dev-arch/M3UPlay" target="_blank" rel="noreferrer">
+          <span class="meta">Playback</span>
+          <h3>M3UPlay</h3>
+          <p>Play M3U files directly. A player for people who already have a list.</p>
+          <span class="arrow">Open repository</span>
+        </a>
+        <a class="work-card" href="https://github.com/V-Dev-arch/Astra-Tv-Browser-Homepage-" target="_blank" rel="noreferrer">
+          <span class="meta">Television</span>
+          <h3>Astra TV Homepage</h3>
+          <p>A customizable start page for TV browsers. Big type, few taps, less hunting.</p>
+          <span class="arrow">Open repository</span>
+        </a>
+        <a class="work-card" href="https://github.com/V-Dev-arch/CARTSYNC-" target="_blank" rel="noreferrer">
+          <span class="meta">Commerce</span>
+          <h3>Cartsync</h3>
+          <p>A Shopify app for persistent carts. The basket survives the tab you closed.</p>
+          <span class="arrow">Open repository</span>
+        </a>
+        <a class="work-card span-2" href="https://github.com/V-Dev-arch/Automator-Bot-" target="_blank" rel="noreferrer">
+          <span class="meta">Ops</span>
+          <h3>Automator Bot</h3>
+          <p>A Telegram bot that keeps free-tier deployments awake with scheduled pings. Small, boring, useful.</p>
+          <span class="arrow">Open repository</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="colophon">
+      <div class="colophon">
+        <p class="kicker">Colophon</p>
+        <h2>Hosted on GitHub Pages.</h2>
+        <p>This site is one HTML file, a stylesheet, and a little JavaScript. No build step. Source lives in <a href="https://github.com/V-Dev-arch/velora-studio">V-Dev-arch/velora-studio</a> and is published at <a href="https://v-dev-arch.github.io/">v-dev-arch.github.io</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="rule"></div>
+  <footer class="site-footer">
+    <span>Velora · V Dev</span>
+    <span>Static HTML · GitHub Pages</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
